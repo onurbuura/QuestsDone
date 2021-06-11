@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 1146713515}
   - component: {fileID: 1146713514}
   - component: {fileID: 1146713518}
+  - component: {fileID: 1146713519}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -226,7 +227,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1146713513}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03342d47cd6fa294f9e62c91ee7bf3e7, type: 3}
   m_Name: 
@@ -236,6 +237,24 @@ MonoBehaviour:
   - {x: 0, y: -2}
   time: 1
   isMoving: 1
+--- !u!114 &1146713519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146713513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 505a53f51634584478f293b3b71d6a0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points:
+  - {x: 0, y: 2}
+  - {x: 0, y: -2}
+  - {x: 5, y: 5}
+  time: 1
+  toggleKey: 32
 --- !u!1 &1742255391
 GameObject:
   m_ObjectHideFlags: 0

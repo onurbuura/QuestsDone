@@ -17,15 +17,12 @@ public class InputManager : MonoBehaviour
 
     void Awake()
     {
-        Instance = this;
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
+        //Instance = this; // Singleton eksik
 
+        if (Instance != null) Instance =this;
+        else Destroy(gameObject);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButtonDown(0))

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class FizzBuzz : MonoBehaviour
@@ -12,22 +13,29 @@ public class FizzBuzz : MonoBehaviour
     int val = 0;
     float counter = 0;
 
+    [SerializeField] float endTime;
     [SerializeField] int maxLimit = 100;
 
 
 
-    private void Start()
+    IEnumerator Start() //Start fonksiyonunu coroutine olarak çaðýrabiliyoruz.
     {
-
-    }
-
-    void Update()
-    {
-        counter += Time.deltaTime;
-
-        if (counter >= 0.2f)
+        WaitForSeconds wait = new WaitForSeconds(endTime / maxLimit);
+        while (val < maxLimit)
+        {
             SetText();
+            yield return wait;
+        }
     }
+
+    //void Update()
+    //{
+    //    counter += Time.deltaTime;                                // counter deðerinin iþlem bittikten sonra artmamasý gereksiz.
+    //                                                              // 
+    //    if (counter >= 0.2f)                                      // Gereksiz Update çaðýrýmý Coroutine kullanýlarak yapýlmasý tercih edilir.
+    //        SetText();                                            // 
+    //}
+
 
     void SetText()
     {
